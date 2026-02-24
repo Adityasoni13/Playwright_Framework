@@ -1,0 +1,12 @@
+{
+
+    "email":"sn.aditya22@gmail.com",
+    "password":"admin123",
+    "Intrest":["Selenium","Java","Python"],
+    "Address":{
+                "Area": "STPI",
+                "Line1":"Saras Dairy Road",
+                "City":"Jjodhpur"
+              }
+
+}
