@@ -4,24 +4,24 @@ class LoginPage {
     constructor(page) {
         
         this.page = page
-        this.ManageOption = "//span[normalize-space()='Manage']"
-        this.username = "//input[@id='email1']"
-        this.password = "//input[@id='password1']"
-        this.loginButton = "//button[normalize-space()='Sign in']"
+        this.ManageOption = page.locator("//span[normalize-space()='Manage']")
+        this.Username = page.locator("//input[@id='email1']")
+        this.Password = page.locator("//input[@id='password1']")
+        this.loginButton = page.locator("//button[normalize-space()='Sign in']")
 
     }
 
-    async LoginToApplication()
+    async LoginToApplication(user_name, password)
     {
 
-        await this.page.fill(this.username,"admin@email.com")
-        await this.page.fill(this.password,"admin@123")
-        await this.page.click(this.loginButton)
+        await this.Username.fill(user_name)
+        await this.Password.fill(password)
+        await this.loginButton.click()
     }
 
     async VerifyManageOption()
     {
-        expect(this.page.locator(this.ManageOption).toBeVisible())
+        await expect(this.ManageOption).toBeVisible()
     }
 
 }

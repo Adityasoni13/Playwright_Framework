@@ -8,9 +8,9 @@ test("Verify the Login Functionility", async function ({page}) {
 
     const loginPage = new LoginPage(page)
 
-    await loginPage.LoginToApplication()
+    await loginPage.LoginToApplication('admin@email.com', 'admin@123')
 
-    await page.pause()
+    // await page.pause()
 
     await loginPage.VerifyManageOption()
 
