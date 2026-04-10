@@ -54,7 +54,8 @@ export default defineConfig({
             channel: 'chrome',
             video:"on",
             trace:"on",
-            screenshot:"on"
+            screenshot:"on",
+            fullyParallel: true,
        }
       
     },
